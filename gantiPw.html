@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPA-TI</title>
+    <style>
+        body {
+            font-family: Galatea, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            background-color: #0039C8;
+            color: white;
+            align-items: center;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo img {
+            width: 60px; /* Ukuran logo diper kecil */
+            height: 60px; /* Ukuran logo diper kecil */
+            margin-right: 8px;
+        }
+        .navbar .logo h1 {
+            font-size: 28px; /* Ukuran font logo lebih kecil */
+            font-weight: 700;
+            letter-spacing: 0.32px;
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 16px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px; /* Ukuran font menu lebih kecil */
+            font-weight: 500;
+        }
+        .navbar .user-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .navbar .user-info img {
+            width: 40px; /* Ukuran gambar profil lebih kecil */
+            height: 40px; /* Ukuran gambar profil lebih kecil */
+            border-radius: 50%;
+        }
+        .navbar .user-info .notifications {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .container {
+            padding: 20px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .container .profile-info {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 8px; /* Menambahkan jarak bawah */
+        }
+        .container .profile-info h2 {
+            color: #0039C8;
+            font-size: 24px; /* Ukuran font lebih kecil */
+            font-weight: 700;
+        }
+        .container .form-container {
+            background-color: #0039C8;
+            padding: 30px;
+            padding-bottom: 60px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .container .form-container h3 {
+            color: #AFFA08;
+            font-size: 28px; /* Ukuran font judul lebih kecil */
+            font-weight: 700;
+        }
+        .container .form-container label {
+            color: rgba(255, 255, 255, 0.90);
+            font-size: 20px; /* Ukuran font label lebih kecil */
+            font-weight: 400;
+        }
+        .container .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 16px; /* Menambahkan jarak bawah */
+            border-radius: 25px; /* Ukuran border lebih kecil */
+            border: none;
+            font-size: 16px; /* Ukuran font input lebih kecil */
+        }
+        .container .form-container .submit-btn {
+            background-color: #AFFA08;
+            border-radius: 25px; /* Ukuran border lebih kecil */
+            padding: 5px 10px;
+            color: black;
+            font-size: 20px; /* Ukuran font lebih kecil */
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            width: auto;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logoHijau.png" alt="Logo">
+            <div>
+                <h1>SIMPA-TI</h1>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Prestasi</a>
+            <a href="#">Leaderboard</a>
+        </div>
+        <div class="user-info">
+            <div class="notifications" onclick="window.location.href='notifikasi.html'">
+                <img src="notifikasi.png" alt="Notifikasi">
+            </div>
+            <img src="profilpic.png" alt="Profile">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- User Info -->
+        <div class="profile-info">
+            <h2>2341760000 / Kim Jaehyun</h2>
+        </div>
+
+        <!-- Password Change Form -->
+        <div class="form-container">
+            <h3>Ganti Password</h3>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Masukkan email">
+            <div class="submit-btn" onclick="alert('Password telah dikirim!')">
+                Kirim
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
