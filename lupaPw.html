@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupa Kata Sandi SIMPA-TI</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #0039C8 0%, #001C62 100%);
+            font-family: Poppins, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px; /* Ukuran container lebih kecil */
+            background: white;
+            border-radius: 20px; /* Sudut lebih tumpul */
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); /* Sedikit lebih ringan */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .header {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .header h1 {
+            font-size: 1.5rem; /* Ukuran font judul lebih kecil */
+            color: #0000EE;
+            margin: 0;
+        }
+
+        .app-name-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px; /* Menambah jarak antar elemen */
+        }
+
+        .logo {
+            width: 300px; /* Ukuran logo lebih kecil */
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .app-name {
+            font-size: 3rem; /* Ukuran teks nama aplikasi lebih kecil */
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .app-name .simpa {
+            color: #0039C8;
+        }
+
+        .app-name .dash {
+            color: #AFFA08;
+        }
+
+        .app-name .ti {
+            color: #0039C8;
+        }
+
+        .forgot-password-form {
+            width: 100%;
+            max-width: 350px; /* Lebih kompak */
+            margin: 10px auto;
+        }
+
+        .input-group {
+            margin-bottom: 10px; /* Mengurangi jarak antar input */
+			font-weight: 700;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-size: 0.9rem; /* Ukuran label lebih kecil */
+            color: #0039C8;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            padding: 8px;
+            font-size: 0.9rem; /* Ukuran teks input lebih kecil */
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .forgot-password-form p {
+            font-size: 0.9rem;
+            color: #0039C8;
+            margin-bottom: 15px;
+        }
+
+        .back-to-login {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .back-to-login a {
+            text-decoration: none;
+            color: #0000EE;
+            font-size: 0.9rem; /* Ukuran font lebih kecil */
+        }
+
+        .submit-button {
+            margin-top: 15px;
+            background: #0000EE;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #0039C8;
+        }
+
+        .system-description {
+            text-align: center;
+            font-size: 0.8rem; /* Ukuran font lebih kecil */
+            color: white;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="app-name-container">
+                <img class="logo" src="logoHijau.png" alt="Logo">
+                <div class="app-name">
+                    <span class="simpa">SIMPA</span><span class="dash">-</span><span class="ti">TI</span>
+                </div>
+            </div>
+            <p class="system-description">
+                SISTEM INFORMASI MAHASISWA BERPRESTASI TEKNOLOGI INFORMASI
+            </p>
+        </div>
+
+        <div class="right-section">
+            <div class="header">
+                <h1>LUPA KATA SANDI</h1>
+            </div>
+            <form class="forgot-password-form" id="forgotPasswordForm">
+                <p>Masukkan Email dan Username Anda untuk mengatur ulang kata sandi</p>
+                
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Masukkan Username Anda" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Masukkan Email Anda" required>
+                </div>
+                
+                <button type="submit" class="submit-button">Kirim Sandi Baru</button>
+            </form>
+
+            <div class="back-to-login">
+                <a href="login.html">Kembali untuk Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+
+        forgotPasswordForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Instruksi pengaturan ulang kata sandi telah dikirim ke email Anda!');
+            // Tambahkan logika pengiriman email atau pengaturan ulang kata sandi di sini.
+        });
+    </script>
+</body>
+</html>

@@ -61,9 +61,9 @@
             cursor: pointer;
         }
         .container {
-            padding: 20px;
-            padding-left: 100px;
-            padding-right: 100px;
+            padding: 0px;
+            max-width: 800px; /* Mengurangi lebar kontainer */
+            margin: 0 auto; /* Membuat kontainer terpusat */
         }
         .container .profile-info {
             display: flex;
@@ -72,7 +72,7 @@
         }
         .container .profile-info h2 {
             color: #0039C8;
-            font-size: 24px; 
+            font-size: 30px; 
             font-weight: 700;
         }
         .container .form-container {
@@ -107,7 +107,7 @@
             padding: 5px 10px;
             color: black;
             font-size: 20px; 
-            font-weight: 700;
+            font-weight: 500;
             text-align: center;
             cursor: pointer;
             border: none;
@@ -143,19 +143,56 @@
     <div class="container">
         <!-- User Info -->
         <div class="profile-info">
-            <h2>2341760000 / Kim Jaehyun</h2>
+            <h2>2341769000 / Daniel Rusdi</h2>
         </div>
 
         <!-- Password Change Form -->
         <div class="form-container">
             <h3>Ganti Password</h3>
+            
+            <!-- Email -->
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Masukkan email">
-            <div class="submit-btn" onclick="alert('Password telah dikirim!')">
-                Kirim
+            <input type="email" id="email" placeholder="Masukkan email" required>
+            
+            <!-- Old Password -->
+            <label for="old-password">Kata Sandi Lama</label>
+            <input type="password" id="old-password" placeholder="Masukkan kata sandi lama" required>
+            
+            <!-- New Password -->
+            <label for="new-password">Kata Sandi Baru</label>
+            <input type="password" id="new-password" placeholder="Masukkan kata sandi baru" required>
+            
+            <!-- Confirm New Password -->
+            <label for="confirm-password">Konfirmasi Kata Sandi Baru</label>
+            <input type="password" id="confirm-password" placeholder="Konfirmasi kata sandi baru" required>
+
+            <!-- Submit Button -->
+            <div class="submit-btn" onclick="changePassword()">
+                Ubah Kata Sandi
             </div>
         </div>
     </div>
+
+    <script>
+        function changePassword() {
+            const oldPassword = document.getElementById('old-password').value;
+            const newPassword = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const email = document.getElementById('email').value;
+
+            if (newPassword !== confirmPassword) {
+                alert('Kata sandi baru dan konfirmasi kata sandi tidak cocok!');
+                return;
+            }
+
+            if (!oldPassword || !newPassword || !email) {
+                alert('Semua kolom harus diisi!');
+                return;
+            }
+
+            alert('Password telah dikirim! Silakan cek email Anda untuk instruksi lebih lanjut.');
+        }
+    </script>
 
 </body>
 </html>
